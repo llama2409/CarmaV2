@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Clock, Pound, CheckCircle, Bookmark } from "lucide-react";
+import { MapPin, Clock, BadgePoundSterling, CheckCircle, Bookmark } from "lucide-react";
 import { Job, formatPosted } from "@/lib/data";
 
 type Props = { job: Job };
@@ -72,7 +72,7 @@ export default function JobCard({ job }: Props) {
             : `${job.hoursMin}–${job.hoursMax} hrs per week`}
         </div>
         <div className="flex items-center gap-1.5">
-          <span className="text-gray-400 font-bold text-base leading-none">£</span>
+          <BadgePoundSterling className="w-4 h-4 text-gray-400" />
           £{job.payMin.toFixed(2)} – £{job.payMax.toFixed(2)} / hr
         </div>
         <div className="flex items-center gap-1.5">
